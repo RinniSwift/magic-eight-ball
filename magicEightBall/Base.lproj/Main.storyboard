@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="magicEightBall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have a question?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTt-zR-Sbg">
+                                <rect key="frame" x="106.5" y="168.5" width="162" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="gQJ-o0-YjF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abn-sl-krK">
+                                <rect key="frame" x="151" y="483.5" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eew-mt-ohZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Shake It!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shakeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NZD-cb-dPJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-billiard-ball-96" translatesAutoresizingMaskIntoConstraints="NO" id="jOe-jk-Vp2">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="nM9-WP-jU3"/>
+                                    <constraint firstAttribute="width" constant="100" id="y4D-8G-dKx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OTt-zR-Sbg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0n8-ym-cAk"/>
+                            <constraint firstItem="Abn-sl-krK" firstAttribute="top" secondItem="jOe-jk-Vp2" secondAttribute="bottom" constant="100" id="Y7v-Yz-BfT"/>
+                            <constraint firstItem="Abn-sl-krK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YR4-Sc-SVY"/>
+                            <constraint firstItem="jOe-jk-Vp2" firstAttribute="top" secondItem="OTt-zR-Sbg" secondAttribute="bottom" constant="90" id="eF6-lx-gE2"/>
+                            <constraint firstItem="jOe-jk-Vp2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mGi-hq-5sd"/>
+                            <constraint firstItem="jOe-jk-Vp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yGD-S4-FVi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="OTt-zR-Sbg" id="YqL-S6-vwx"/>
+                        <outlet property="shakeButton" destination="Abn-sl-krK" id="Dmv-k1-tST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-billiard-ball-96" width="96" height="96"/>
+    </resources>
+</document>
