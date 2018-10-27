@@ -49,6 +49,9 @@
                                 <state key="normal" title="Generate Ideas!">
                                     <color key="titleColor" red="0.59215686270000001" green="0.58823529409999997" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ideaGeneratorTapped:" destination="qYj-uX-8g8" eventType="touchUpInside" id="ULq-eM-xCu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,6 +64,11 @@
                         <viewLayoutGuide key="safeArea" id="NIt-Qd-9tt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="8Ps-SA-Ukm"/>
+                    <connections>
+                        <outlet property="ideaGeneratorButton" destination="8ta-vK-mZc" id="lz9-83-TYt"/>
+                        <outlet property="ideaLabel" destination="Voz-Bo-9k7" id="71r-yg-6Da"/>
+                        <outlet property="startupLabel" destination="kig-8Q-NKd" id="0qC-zF-JhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="num-YE-63Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
