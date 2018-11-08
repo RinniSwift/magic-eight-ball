@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var shakeButton: UIButton!
+    @IBOutlet weak var eightBallImage: UIImageView!
 
     
     
@@ -22,7 +23,9 @@ class ViewController: UIViewController {
         
         view.gradientBG(colorOne: .lightPink, colorTwo: .lightPurple)
         
+        
     }
+    
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         guard motion == .motionShake else { return }
@@ -31,7 +34,18 @@ class ViewController: UIViewController {
     
     @IBAction func shakeButtonTapped(_ sender: Any) {
         generateAnswers()
+        moveEightballImage()
+        
     }
+    
+    func moveEightballImage() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.eightBallImage.frame.origin.x += 20
+        }){_ in
+            UIView.animateKeyframes(withDuration: 0.1, delay: 0, options: [.autoreverse], animations: {self.eightBallImage.frame.origin.x -= 20})
+            UIView.animate(withDuration: 0.1, animations: {self.eightBallImage.frame.origin.x += 20}, completion: nil)
+        }
+     }
 
     func generateAnswers() {
         let indexes = UInt32(answers.count)
